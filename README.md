@@ -1,1 +1,58 @@
-📚 Kütüphane Otomasyonu SistemiBu proje, geleneksel kütüphane yönetim süreçlerini dijitalleştirmek, kitap takibini, kullanıcı kayıtlarını ve ödünç alma/iade işlemlerini daha düzenli, hızlı ve hatasız hale getirmek amacıyla geliştirilmiştir.Uygulama, hem kütüphane yöneticilerinin (personel) yönetim görevlerini kolaylaştırmayı hem de kullanıcıların aradıkları kitaplara erişimini ve ödünç takibini şeffaflaştırmayı hedefler.✨ Temel ÖzelliklerProje kapsamında geliştirilen temel fonksiyonlar şunlardır:Güvenli Erişim ve Yetkilendirme:Kullanıcı (Üye) ve Personel (Yönetici) olarak ayrı ayrı hesap oluşturma ve giriş yapabilme.Farklı yetkilendirme rolleri ile arayüz erişimini kısıtlama.Kitap Yönetimi (Personel):Yeni kitap ekleme, mevcut kitap bilgilerini güncelleme ve silme.ISBN, yazar, tür gibi detaylı bilgilere göre envanter takibi.Ödünç ve İade Takibi:Kullanıcıların kitapları ödünç alması ve iade etmesi.Ödünç alma ve iade sürelerinin sistem tarafından otomatik olarak takibi.Kullanıcı Arayüzü:Kullanıcıların arama yapabileceği ve kendi ödünç geçmişlerini görebileceği modern web arayüzü.💻 Teknolojiler ve MimariProje, güncel ve yaygın kullanılan teknolojilerle üç katmanlı mimariye uygun olarak geliştirilmiştir:AlanKullanılan TeknolojilerGeliştirme DiliJavaWeb MimarisiServlet, JavaServer Pages (JSP)Bağımlılık YönetimiMaven (pom.xml ile)VeritabanıPostgreSQL (JDBC bağlantısı ile)Geliştirme OrtamıEclipse IDE🧩 Nesneye Yönelik Tasarım Kalıpları (Design Patterns)Projenin temelini oluşturan Nesneye Yönelik Yazılım Mühendisliği prensipleri doğrultusunda, kodun kalitesini ve sürdürülebilirliğini artırmak için üç temel tasarım kalıbı uygulanmıştır:Tasarım KalıbıTürüUygulama Amacı ve YeriSingletonOluşturucu (Creational)Oturum Yönetimi için tek bir kimlik doğrulama yöneticisi nesnesinin (Auth Manager) tüm uygulamada tek bir örneğini sağlamak.FacadeYapısal (Structural)Karmaşık Kitap Yönetimi (ekleme, silme, güncelleme) operasyonlarını tek bir basit arayüz (Kitap Yönetim Facade'ı) üzerinden düzenlemek.ObserverDavranışsal (Behavioral)Geciken iade durumlarında ilgili kullanıcıları ve yöneticileri otomatik olarak bildirim mekanizmasına abone yapmak ve bilgilendirmek.⚙️ Yazılım Geliştirme MetodolojisiProje, kısıtlı zaman dilimine ve sürekli değişime uyum sağlaması nedeniyle Scrum Metodolojisi kullanılarak geliştirilmiştir.Avantajı: Belirlenen temel özellikler sprint'lere bölünerek, kısa iterasyonlarla hızlı ve test odaklı bir geliştirme süreci izlenmiştir.Aşamalar: Proje, belirlenen 3 haftalık süre zarfında, her aşamada farklı bir temel özelliği (Kullanıcı, Kitap Yönetimi, Ödünç-İade) tamamlamaya odaklanmıştır.🛠️ Kurulum ve ÇalıştırmaBu projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyin:Veritabanı Kurulumu: Yerelinizde bir PostgreSQL veritabanı kurun ve projenin gerektirdiği tabloları oluşturun.DBConnection.java dosyasındaki veritabanı bağlantı bilgilerini kendi ayarlarınıza göre güncelleyin.Proje İçe Aktarma: Projeyi Eclipse veya başka bir Java IDE'ye (Maven projesi olarak) içe aktarın.Bağımlılıklar: pom.xml dosyasında tanımlı olan tüm Maven bağımlılıklarının (özellikle PostgreSQL JDBC sürücüsünün) indirilmesini sağlayın.Dağıtım: Projeyi bir Servlet/JSP konteynerine (Apache Tomcat gibi) dağıtın.Erişim: Tarayıcınızda uygulamanın dağıtıldığı adrese (genellikle http://localhost:8080/ProjeAdi/) erişin.Proje Ekibi: Sercan Şen - Batuhan NacitarhanDers Sorumlusu: Doç. Dr. Ahmet Arif AYDINDers Asistanı: Arş. Gör. Taha Burak ÖZDEMİR
+# 📚 Kütüphane Otomasyon Sistemi
+
+Bu proje, geleneksel kütüphane yönetim süreçlerini dijitalleştirmek; kitap takibi, kullanıcı kayıtları ve ödünç alma/iade işlemlerini daha düzenli, hızlı ve hatasız hale getirmek amacıyla geliştirilmiş bir web uygulamasıdır.
+
+## 👥 Proje Ekibi
+* **Sercan Şen**
+* **Batuhan Nacitarhan**
+
+**Ders Sorumlusu:** Doç. Dr. Ahmet Arif AYDIN  
+**Ders Asistanı:** Arş. Gör. Taha Burak ÖZDEMİR
+
+---
+
+## ✨ Temel Özellikler
+
+* **Güvenli Kimlik Doğrulama:** Kullanıcı (Üye) ve Personel (Yönetici) rolleri için ayrı giriş sistemleri.
+* **Envanter Yönetimi:** Personel için kitap ekleme, silme ve güncelleme yetkileri.
+* **Ödünç/İade Takibi:** Kullanıcıların kitap ödünç alabilmesi ve iade süreçlerinin sistem üzerinden takibi.
+* **Arama ve Filtreleme:** Kitapların ISBN, yazar ve tür bilgilerine göre kolayca bulunabilmesi.
+
+---
+
+## 🛠️ Kullanılan Teknolojiler
+
+* **Dil:** Java
+* **Web Teknolojileri:** Java Servlet, JSP (JavaServer Pages)
+* **Veritabanı:** PostgreSQL
+* **Bağımlılık Yönetimi:** Maven
+* **Sunucu:** Apache Tomcat
+* **IDE:** Eclipse
+
+---
+
+## 🧩 Uygulanan Tasarım Kalıpları (Design Patterns)
+
+Proje kapsamında **Nesneye Yönelik Yazılım Mühendisliği** prensiplerine uygun olarak şu kalıplar kullanılmıştır:
+
+1.  **Singleton Pattern (Oturum Yönetimi):** Uygulama genelinde oturum ve kimlik doğrulama işlemlerinin tek bir merkezden tutarlı şekilde yönetilmesini sağlar.
+2.  **Facade Pattern (Kitap İşlemleri):** Arka plandaki karmaşık veritabanı ve iş mantığı süreçlerini sadeleştirerek tek bir arayüz üzerinden kitap yönetimini kolaylaştırır.
+3.  **Observer Pattern (Bildirim Sistemi):** Kitapların iade süreleri yaklaştığında veya geciktiğinde ilgili tarafları bilgilendirmek için kullanılan dinamik bir yapı sunar.
+
+---
+
+## 📈 Yazılım Geliştirme Metodolojisi
+
+Proje süreci **Scrum Metodolojisi** üzerine kurgulanmıştır. 
+* 3 haftalık kısa iterasyonlar (sprint) kullanılmıştır.
+* Özellikler önceliklendirilerek her aşamada test edilebilir modüller geliştirilmiştir.
+* Ekip içi koordinasyon ve özellik entegrasyonu Scrum prensipleriyle yönetilmiştir.
+
+---
+
+## 🚀 Kurulum ve Çalıştırma
+
+1.  **Veritabanı:** PostgreSQL üzerinde bir veritabanı oluşturun ve `DBConnection.java` dosyasındaki kullanıcı adı/şifre bilgilerini güncelleyin.
+2.  **Bağımlılıklar:** Proje klasöründeki `pom.xml` dosyasını kullanarak Maven bağımlılıklarını (özellikle PostgreSQL sürücüsünü) yükleyin.
+3.  **Deployment:** Projeyi Tomcat gibi bir sunucuya deploy edin.
+4.  **Erişim:** Tarayıcınızdan `http://localhost:8080/KutuphaneYonetimSistemi/` adresine giderek uygulamayı başlatın.
