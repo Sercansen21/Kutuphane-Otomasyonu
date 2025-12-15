@@ -4,10 +4,6 @@ Bu proje, geleneksel kütüphane yönetim süreçlerini dijitalleştirmek; kitap
 
 ## 👥 Proje Ekibi
 * **Sercan Şen**
-* **Batuhan Nacitarhan**
-
-**Ders Sorumlusu:** Doç. Dr. Ahmet Arif AYDIN  
-**Ders Asistanı:** Arş. Gör. Taha Burak ÖZDEMİR
 
 ---
 
