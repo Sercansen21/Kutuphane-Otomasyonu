@@ -4,6 +4,7 @@ Bu proje, geleneksel kütüphane yönetim süreçlerini dijitalleştirmek; kitap
 
 ## 👥 Proje Ekibi
 * **Sercan Şen**
+* **Batuhan Nacitarhan**
 
 ---
 
